@@ -10,6 +10,8 @@ RUN yum install -y java-headless && \
 
 ADD assets/entrypoint.sh /sbin/entrypoint.sh
 
+ENV JAVA_OPTS="-Xms:256m -Xmx:4g"
+
 VOLUME /opt/apacheds/instances/container
 
 EXPOSE 389 636
