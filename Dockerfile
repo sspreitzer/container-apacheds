@@ -12,5 +12,7 @@ ADD assets/entrypoint.sh /sbin/entrypoint.sh
 
 VOLUME /opt/apacheds/instances/container
 
+EXPOSE 389 636
+
 WORKDIR /opt/apacheds
 CMD ["/opt/apacheds/bin/apacheds.sh", "container", "run"]
