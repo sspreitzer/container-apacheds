@@ -14,7 +14,7 @@ ENV JAVA_OPTS="-Xms256m -Xmx4g"
 
 VOLUME /opt/apacheds/instances/container
 
-EXPOSE 10389 10636
+EXPOSE 10389 10636 60088 60464
 
 WORKDIR /opt/apacheds
 CMD ["/opt/apacheds/bin/apacheds.sh", "container", "run"]
