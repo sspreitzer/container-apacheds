@@ -8,7 +8,9 @@ RUN yum install -y java-headless && \
     rm /opt/apacheds.tar.gz && \
     ln -s /opt/apacheds-2.0.0-M24 /opt/apacheds
 
-VOLUME /opt/apacheds/instances/default/log /opt/apacheds/instances/default/run /opt/apacheds/instances/default/cache /opt/apacheds/instances/default/partitions /opt/apacheds/instances/default/conf
+ADD assets/entrypoint.sh /sbin/entrypoint.sh
+
+VOLUME /opt/apacheds/instances/container
 
 WORKDIR /opt/apacheds
-CMD ["/opt/apacheds/bin/apacheds.sh", "run"]
+CMD ["/opt/apacheds/bin/apacheds.sh", "container", "run"]
