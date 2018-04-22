@@ -11,4 +11,4 @@ RUN yum install -y java-headless && \
 VOLUME /opt/apacheds/instances/default/log /opt/apacheds/instances/default/run
 
 WORKDIR /opt/apacheds
-CMD ["/opt/apacheds/bin/apacheds.sh", "start"]
+CMD ["/opt/apacheds/bin/apacheds.sh", "run"]
