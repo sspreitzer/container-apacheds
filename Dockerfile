@@ -9,4 +9,4 @@ RUN yum install -y java-headless && \
     ln -s /opt/apacheds-2.0.0-M24 /opt/apacheds
 
 WORKDIR /opt/apacheds
-CMD ["/opt/apacheds/bin/apacheds.sh"]
+CMD ["/opt/apacheds/bin/apacheds.sh", "start"]
