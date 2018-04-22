@@ -1,4 +1,4 @@
-FROM rhel:7
+FROM rhel:7.5
 
 RUN yum install -y openjdk && \
     yum clean all && \
